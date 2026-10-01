@@ -219,7 +219,7 @@ h2 {
 }
 
 .hero-btn {
-  color: #212423;
+  color: #343333;
   border: 3px solid #6f7b76;
   background: transparent;
   transition: var(--ease);
@@ -364,6 +364,23 @@ p.en {
 #activities .card-body h5 {
   font-size: 15px;
   line-height: 1.5;
+}
+
+.demo-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #99c0a9;
+  color: #343333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.demo-btn:hover {
+  background: #99c0a9;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /* ==================================================
