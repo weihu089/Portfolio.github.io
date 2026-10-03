@@ -168,20 +168,22 @@ h2 {
    HERO
 ================================================== */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-      rgba(237, 233, 226, 0.55),
-      rgba(110, 127, 106, 0.55));
-  backdrop-filter: blur(2px);
+  background:
+    linear-gradient(135deg,
+      rgba(237, 233, 226, 0.72),
+      rgba(110, 127, 106, 0.58));
+  backdrop-filter: blur(3px);
 }
 
 .hero-content {
@@ -191,44 +193,114 @@ h2 {
   color: var(--text);
 }
 
+/* 個人照片 */
+.hero-profile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
 .hero-img {
-  width: min(350px, 70vw);
-  height: auto;
+  width: min(300px, 70vw);
   aspect-ratio: 1 / 1;
-  border-radius: 50%;
   object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, .35);
-  box-shadow: var(--shadow-md);
-  transition: var(--ease);
+  border-radius: 50%;
+
+  border: 5px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.16);
+
+  transition: transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .hero-img:hover {
-  transform: scale(1.06);
+  transform: scale(1.04);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.22);
 }
 
-.hero-title {
-  font-family: "Noto Serif TC", serif;
-  font-size: 45px;
+/* 英文小標 */
+.hero-label {
+  margin: 0 0 8px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
+  opacity: 0.65;
 }
 
+/* 姓名 */
+.hero-title {
+  margin: 0;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(42px, 5vw, 58px);
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+
+/* 副標 */
 .hero-subtitle {
-  font-size: 18px;
-  opacity: 0.9;
+  margin-top: 12px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  opacity: 0.85;
 }
 
+/* 按鈕區 */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+/* 按鈕 */
 .hero-btn {
+  min-width: 125px;
+  padding: 10px 24px;
+
   color: #343333;
-  border: 3px solid #6f7b76;
+  border: 2px solid #6f7b76;
   border-radius: 50px;
-  background: transparent;
-  transition: var(--ease);
+  background: rgba(255, 255, 255, 0.12);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .hero-btn:hover {
   background: #31725bba;
   color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 114, 91, 0.22);
+}
+
+/* 手機版 */
+@media (max-width: 576px) {
+
+  .hero-img {
+    width: 220px;
+  }
+
+  .hero-title {
+    letter-spacing: 6px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .hero-btn {
+    min-width: 110px;
+    padding: 9px 18px;
+  }
 }
 
 /* ==================================================
