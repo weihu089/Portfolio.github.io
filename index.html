@@ -426,30 +426,67 @@
   </section>
 
   <section id="activities" class="section container" data-aos="fade-up">
-    <div class="section-card">
-      <h2>活動 <span class="en-title">Activities</span></h2>
-      <div class="row g-4 mt-2">
+  <div class="section-card">
+    <h2>活動 <span class="en-title">Activities</span></h2>
 
-        <div class="col-12 col-md-6">
-          <div class="card project-card">
-            <img src="images/activity1.jpg" class="card-img-top" onclick="openLightbox(this)">
-            <div class="card-body">
-              <h5>工業管理與科技產業學術研討會</h5>
-            </div>
+    <div id="activityCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="3500">
+
+      <!-- 圖片 -->
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="images/activity1.jpg"
+               class="d-block w-100 activity-img"
+               alt="工業管理與科技產業學術研討會"
+               onclick="openLightbox(this)">
+          <div class="carousel-caption">
+            <h5>工業管理與科技產業學術研討會</h5>
           </div>
         </div>
 
-        <div class="col-12 col-md-6">
-          <div class="card project-card">
-            <img src="images/activity2.jpg" class="card-img-top" onclick="openLightbox(this)">
-            <div class="card-body">
-              <h5>資訊管理111級專題競賽</h5>
-            </div>
+        <div class="carousel-item">
+          <img src="images/activity2.jpg"
+               class="d-block w-100 activity-img"
+               alt="資訊管理111級專題競賽"
+               onclick="openLightbox(this)">
+          <div class="carousel-caption">
+            <h5>資訊管理111級專題競賽</h5>
           </div>
         </div>
+
       </div>
+
+      <!-- 左箭頭 -->
+      <button class="carousel-control-prev"
+              type="button"
+              data-bs-target="#activityCarousel"
+              data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <!-- 右箭頭 -->
+      <button class="carousel-control-next"
+              type="button"
+              data-bs-target="#activityCarousel"
+              data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- 下方指示點 -->
+      <div class="carousel-indicators">
+        <button type="button"
+                data-bs-target="#activityCarousel"
+                data-bs-slide-to="0"
+                class="active"></button>
+
+        <button type="button"
+                data-bs-target="#activityCarousel"
+                data-bs-slide-to="1"></button>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ================= FOOTER ================= -->
   <footer>
