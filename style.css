@@ -221,6 +221,7 @@ h2 {
 .hero-btn {
   color: #343333;
   border: 3px solid #6f7b76;
+  border-radius: 50px;
   background: transparent;
   transition: var(--ease);
 }
