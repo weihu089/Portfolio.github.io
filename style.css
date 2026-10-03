@@ -588,3 +588,52 @@ footer {
   opacity: 0.6;
   margin-top: 10px;
 }
+
+/* ================= 活動跑馬燈 ================= */
+
+#activityCarousel {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.activity-img {
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* 圖片下方標題 */
+#activityCarousel .carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 25px 20px 20px;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0));
+  border-radius: 0 0 12px 12px;
+}
+
+#activityCarousel .carousel-caption h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* 左右箭頭 */
+#activityCarousel .carousel-control-prev,
+#activityCarousel .carousel-control-next {
+  width: 8%;
+}
+
+/* 指示點 */
+#activityCarousel .carousel-indicators {
+  bottom: 10px;
+}
+
+#activityCarousel .carousel-indicators button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
