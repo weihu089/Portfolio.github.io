@@ -127,17 +127,13 @@ h2 {
 /* input */
 .nav-search-input {
   font-family: "Noto Serif TC", serif;
-
   border: 1px solid rgba(60, 138, 111, 0.25);
   border-radius: 999px;
   padding: 6px 12px;
   width: 150px;
-
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(6px);
-
   transition: var(--ease);
-
   color: #000 !important;
   font-weight: 400;
 }
@@ -153,9 +149,7 @@ h2 {
   outline: none;
   border-color: #3c8a6f99;
   background: rgba(255, 255, 255, 0.8);
-
   color: #000 !important;
-
   box-shadow:
     0 6px 18px rgba(60, 138, 111, 0.18);
 }
@@ -163,7 +157,6 @@ h2 {
 /* placeholder */
 .nav-search-input::placeholder {
   font-family: "Noto Serif TC", serif;
-
   color: #000;
   font-size: 13px;
   opacity: 0.35;
@@ -179,7 +172,6 @@ h2 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-
   /* 背景圖片 */
   background-image: url("images/hero-bg.png");
   background-size: cover;
@@ -191,14 +183,10 @@ h2 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       rgba(237, 233, 226, 0.65),
-      rgba(110, 127, 106, 0.40)
-    );
-
+      rgba(110, 127, 106, 0.40));
   backdrop-filter: blur(2px);
 }
 
@@ -222,12 +210,9 @@ h2 {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
-
   border: 5px solid rgba(255, 255, 255, 0.75);
-
   box-shadow:
     0 15px 40px rgba(0, 0, 0, 0.16);
-
   transition:
     transform 0.4s ease,
     box-shadow 0.4s ease;
@@ -235,7 +220,6 @@ h2 {
 
 .hero-img:hover {
   transform: scale(1.04);
-
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.22);
 }
@@ -279,13 +263,10 @@ h2 {
 .hero-btn {
   min-width: 125px;
   padding: 10px 24px;
-
   color: #343333;
   border: 2px solid #6f7b76;
   border-radius: 50px;
-
   background: rgba(255, 255, 255, 0.18);
-
   transition:
     background 0.3s ease,
     color 0.3s ease,
@@ -296,9 +277,7 @@ h2 {
 .hero-btn:hover {
   background: #31725bba;
   color: white;
-
   transform: translateY(-3px);
-
   box-shadow:
     0 8px 20px rgba(49, 114, 91, 0.22);
 }
@@ -491,7 +470,8 @@ p.en {
 .badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px; /* 比 margin-right 更乾淨 */
+  gap: 6px;
+  /* 比 margin-right 更乾淨 */
   margin-top: var(--s3);
 }
 
@@ -619,7 +599,6 @@ footer {
 }
 
 /* ================= 活動跑馬燈 ================= */
-
 #activityCarousel {
   max-width: 700px;
   margin: 0 auto;
@@ -646,11 +625,9 @@ footer {
   right: 0;
   bottom: 0;
   padding: 25px 20px 18px;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0)
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0));
   border-radius: 0 0 12px 12px;
 }
 
@@ -662,14 +639,12 @@ footer {
 }
 
 /* ================= 左右箭頭 ================= */
-
 #activityCarousel .carousel-control-prev,
 #activityCarousel .carousel-control-next {
   width: 8%;
 }
 
 /* ================= 下方指示點 ================= */
-
 #activityCarousel .carousel-indicators {
   bottom: 8px;
 }
@@ -684,7 +659,6 @@ footer {
 /* ================= 手機版 ================= */
 
 @media (max-width: 768px) {
-
   #activityCarousel {
     max-width: 100%;
   }
@@ -700,5 +674,4 @@ footer {
   #activityCarousel .carousel-caption h5 {
     font-size: 0.95rem;
   }
-
 }
