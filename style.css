@@ -242,6 +242,7 @@ h2 {
 
 /* 英文小標 */
 .hero-label {
+  font-family: "Noto Serif TC", serif;
   margin: 0 0 8px;
   font-size: 13px;
   font-weight: 600;
