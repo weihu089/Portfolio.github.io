@@ -478,6 +478,7 @@ p.en {
 }
 
 .badge {
+  font-family: 'Noto Serif TC', serif;
   display: inline-flex;
   align-items: center;
   padding: 6px 12px;
