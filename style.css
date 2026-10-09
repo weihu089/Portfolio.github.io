@@ -354,6 +354,67 @@ p.en {
   background: linear-gradient(to right, transparent, #d8d2c8, transparent);
 }
 
+/* 英文自我介紹：可展開區塊 */
+.english-intro {
+  margin-top: 24px;
+  border-top: 1px solid rgba(110, 127, 106, 0.25);
+  padding-top: 18px;
+}
+
+.english-intro summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  list-style: none;
+  color: #6E7F6A;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.english-intro summary::-webkit-details-marker {
+  display: none;
+}
+
+.english-intro summary:hover {
+  color: #4f604b;
+}
+
+.english-intro .toggle-icon {
+  margin-left: auto;
+  font-size: 0.8rem;
+  transition: transform 0.25s ease;
+}
+
+.english-intro[open] .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.english-content {
+  padding-top: 18px;
+  animation: englishFadeIn 0.3s ease;
+}
+
+.english-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+@keyframes englishFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* ==================================================
    TIMELINE
 ================================================== */
