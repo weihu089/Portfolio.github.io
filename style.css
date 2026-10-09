@@ -666,6 +666,44 @@ footer {
   margin-top: 10px;
 }
 
+/* Footer 回到頂端 */
+.footer-back-top {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-back-top a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  color: #6E7F6A;
+  border: 1px solid #6E7F6A;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.footer-back-top a:hover {
+  background-color: #6E7F6A;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.footer-back-top i {
+  transition: transform 0.3s ease;
+}
+
+.footer-back-top a:hover i {
+  transform: translateY(-3px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* ================= 活動跑馬燈 ================= */
 #activityCarousel {
   max-width: 700px;
