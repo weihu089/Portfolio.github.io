@@ -666,30 +666,41 @@ footer {
   margin-top: 10px;
 }
 
-/* Footer 回到頂端 */
+
+/* 回到頂端：固定圓形按鈕 */
 .footer-back-top {
-  margin-top: 24px;
-  display: flex;
-  justify-content: center;
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 999;
 }
 
 .footer-back-top a {
-  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  color: #6E7F6A;
-  border: 1px solid #6E7F6A;
-  border-radius: 30px;
+  justify-content: center;
+
+  color: #fff;
+  background-color: #6E7F6A;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  font-size: 1rem;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(50, 60, 45, 0.18);
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .footer-back-top a:hover {
-  background-color: #6E7F6A;
-  color: #fff;
-  transform: translateY(-3px);
+  background-color: #566851;
+  transform: translateY(-4px);
+  box-shadow: 0 7px 18px rgba(50, 60, 45, 0.25);
 }
 
 .footer-back-top i {
@@ -697,9 +708,24 @@ footer {
 }
 
 .footer-back-top a:hover i {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
+/* 手機版調整 */
+@media (max-width: 576px) {
+  .footer-back-top {
+    right: 16px;
+    bottom: 20px;
+  }
+
+  .footer-back-top a {
+    width: 44px;
+    height: 44px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 平滑捲動 */
 html {
   scroll-behavior: smooth;
 }
