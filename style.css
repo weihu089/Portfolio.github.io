@@ -340,6 +340,7 @@ h2 {
 }
 
 p.en {
+  font-family: 'Noto Serif TC', serif;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.8;
@@ -362,6 +363,7 @@ p.en {
 }
 
 .timeline-item {
+  font-family: 'Noto Serif TC', serif;
   background: #fff;
   padding: var(--s4);
   border-radius: var(--r2);
