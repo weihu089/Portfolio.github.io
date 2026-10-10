@@ -354,6 +354,11 @@ p.en {
   background: linear-gradient(to right, transparent, #d8d2c8, transparent);
 }
 
+/* 關於我：英文使用 Noto Serif TC */
+#about .section-card p {
+  font-family: 'Noto Serif TC', serif;
+}
+
 /* 英文自我介紹：可展開區塊 */
 .english-intro {
   margin-top: 24px;
