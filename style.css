@@ -420,6 +420,7 @@ p.en {
     transform: translateY(0);
   }
 }
+
 /* ==================================================
    TIMELINE
 ================================================== */
@@ -446,11 +447,21 @@ p.en {
 /* ==================================================
    SKILLS
 ================================================== */
+
+/* 技能區介紹 */
+.skills-intro {
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 1rem 0 1.5rem;
+}
+
+/* 技能卡片 */
 .skill-box {
+  height: 100%;
+  padding: 1.5rem;
   background: #fff;
-  padding: var(--s4);
-  border-radius: var(--r2);
-  border: 1px solid #E6E2DA;
+  border: 1px solid rgba(110, 127, 106, 0.18);
+  border-radius: var(--r3);
   box-shadow: var(--shadow-sm);
   transition: var(--ease);
 }
@@ -458,80 +469,416 @@ p.en {
 .skill-box:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: rgba(110, 127, 106, 0.4);
 }
 
-.skill-box h5 {
-  margin-bottom: 12px;
+/* 技能標題與圖示 */
+.skill-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
+
+.skill-heading>i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  color: var(--primary);
+  background: #EDF1EA;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.skill-heading h5 {
+  margin: 0;
   color: #2F3A3A;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
-.tags span {
+/* 技能說明 */
+.skill-box>p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin: 0 0 1.1rem;
+}
+
+/* 技術標籤容器 */
+.skill-box .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* 技術標籤 */
+.skill-box .tags .badge {
   display: inline-block;
-  background: #99c0a9;
-  color: #343333;
-  padding: 6px 10px;
-  border-radius: 20px;
-  font-size: 13px;
-  margin: 4px 4px 0 0;
+  padding: 0.45rem 0.7rem;
+  margin: 0;
+  background: #EDF1EA;
+  color: #52694E;
+  border: 1px solid rgba(110, 127, 106, 0.12);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* 手機版 */
+@media (max-width: 767.98px) {
+  .skill-box {
+    padding: 1.2rem;
+  }
+
+  .skill-heading>i {
+    width: 34px;
+    height: 34px;
+  }
+
+  .skill-heading h5 {
+    font-size: 1rem;
+  }
 }
 
 /* ==================================================
    PROJECTS / CARDS
 ================================================== */
+
+/* 專案卡片 */
 .project-card {
+  height: 100%;
   border: none;
   border-radius: var(--r3);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: var(--ease);
+  background: #fff;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
 
+/* 專案圖片 */
 .project-card img {
+  width: 100%;
   height: 220px;
   object-fit: cover;
+  cursor: pointer;
 }
 
+/* 卡片內容 */
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+/* 專案標題 */
 .project-card h5 {
   font-family: 'Noto Serif TC', serif;
   font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #343A35;
 }
 
-.project-card p {
-  font-family: 'Noto Serif TC', serif;
-  font-size: 14px;
+/* 專案介紹 */
+.project-description {
+  font-family: inherit;
+  font-size: 0.95rem;
   color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
 }
 
-/* Activities special */
-#activities .project-card img {
-  height: 250px;
+/* 核心功能區塊 */
+.project-features {
+  border-top: 1px solid rgba(110, 127, 106, 0.22);
+  padding-top: 1.2rem;
+  margin-top: auto;
 }
 
-#activities .card-body h5 {
-  font-size: 15px;
-  line-height: 1.5;
+.project-features h6 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #6E7F6A;
 }
 
-.demo-btn {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: #99c0a9;
-  color: #343333;
-  text-decoration: none;
+/* 單項功能 */
+.project-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.project-feature:last-child {
+  margin-bottom: 0;
+}
+
+/* 功能圖示 */
+.project-feature>i {
+  color: #6E7F6A;
+  font-size: 1.05rem;
+  width: 22px;
+  text-align: center;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+/* 功能名稱 */
+.project-feature strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #343A35;
+}
+
+/* 功能說明 */
+.project-feature p {
+  font-family: inherit;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* 手機版調整 */
+@media (max-width: 767.98px) {
+  .project-card img {
+    height: 200px;
+  }
+
+  .project-card .card-body {
+    padding: 1.25rem;
+  }
+}
+
+/* ==================================================
+   CERTIFICATIONS
+================================================== */
+
+.certifications-intro {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 1rem 0 1.25rem;
+}
+
+/* 證照卡片 */
+.cert-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #E6E2DA;
+  border-radius: var(--r3);
+  box-shadow: var(--shadow-sm);
+  transition: var(--ease);
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* 證照圖片區 */
+.cert-image-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  padding: 1rem;
+  background: #F5F3EE;
+  border-bottom: 1px solid #E6E2DA;
+}
+
+.cert-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+
+/* 年份標籤 */
+.cert-year {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0.35rem 0.65rem;
+  color: rgba(0, 0, 0, 0.94);
+  background: #316c588e;
+  border: 1px solid rgba(110, 127, 106, 0.2);
+  border-radius: 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* 證照資訊 */
+.cert-card .card-body {
+  padding: 1.25rem 1.4rem;
+}
+
+.cert-card h5 {
+  margin: 0 0 0.4rem;
+  color: #343A35;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.cert-card .card-body p {
+  margin: 0;
+  color: var(--muted);
   font-size: 0.9rem;
-  transition: 0.2s;
+  line-height: 1.7;
 }
 
-.demo-btn:hover {
-  background: #99c0a9;
-  color: #fff;
-  transform: translateY(-2px);
+@media (max-width: 767.98px) {
+  .cert-image-wrap {
+    height: 220px;
+  }
+
+  .cert-card .card-body {
+    padding: 1.1rem 1.2rem;
+  }
+}
+
+/* ==================================================
+   ACTIVITIES
+================================================== */
+
+.activities-intro {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 1rem 0 1.25rem;
+}
+
+/* 輪播外框 */
+.activity-carousel {
+  overflow: hidden;
+  background: #F5F3EE;
+  border: 1px solid #E6E2DA;
+  border-radius: var(--r3);
+}
+
+/* 每張活動投影片 */
+.activity-slide {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 活動照片 */
+.activity-img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  background: #EDE9E2;
+  cursor: zoom-in;
+}
+
+/* 照片下方資訊 */
+.activity-caption {
+  padding: 1.5rem 2rem 2.5rem;
+  background: #fff;
+}
+
+.activity-index {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  color: #6E7F6A;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.activity-caption h5 {
+  margin: 0 0 0.5rem;
+  color: #343A35;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.activity-caption p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* 左右切換按鈕 */
+.activity-control {
+  width: 44px;
+  height: 44px;
+  top: 38%;
+  bottom: auto;
+  margin: 0 0.8rem;
+  background: rgba(52, 58, 53, 0.55);
+  border-radius: 50%;
+  opacity: 0.85;
+  transition: var(--ease);
+}
+
+.activity-control:hover {
+  background: rgba(52, 58, 53, 0.8);
+  opacity: 1;
+}
+
+.activity-control .carousel-control-prev-icon,
+.activity-control .carousel-control-next-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* 指示點 */
+.activity-indicators {
+  margin-bottom: 0.8rem;
+}
+
+.activity-indicators [data-bs-target] {
+  width: 22px;
+  height: 4px;
+  margin: 0 4px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #6E7F6A;
+}
+
+/* 手機版 */
+@media (max-width: 767.98px) {
+  .activity-img {
+    height: 260px;
+  }
+
+  .activity-caption {
+    padding: 1.2rem 1.25rem 2.5rem;
+  }
+
+  .activity-caption h5 {
+    font-size: 1rem;
+  }
+
+  .activity-control {
+    width: 36px;
+    height: 36px;
+    margin: 0 0.4rem;
+  }
 }
 
 /* ==================================================
@@ -611,128 +958,256 @@ p.en {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
+
 /* ==================================================
    FOOTER
 ================================================== */
-footer {
+
+.site-footer {
   background: #2E3430;
   color: #F2F2F2;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 42px 24px 22px;
 }
 
+.footer-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 上方資訊區 */
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.7fr;
+  align-items: start;
+  gap: 36px;
+}
+
+/* 品牌名稱 */
 .footer-title {
-  font-size: 18px;
+  margin: 0;
   font-family: 'Noto Serif TC', serif;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
+  color: #F2F2F2;
 }
 
 .footer-sub {
+  margin: 8px 0 0;
+  color: #C4CBC3;
   font-size: 13px;
-  opacity: 0.7;
-  margin-top: 6px;
-}
-
-.footer-contact {
-  margin-top: 15px;
-  font-size: 14px;
   line-height: 1.8;
 }
 
-.footer-contact a {
-  color: #99c0a9;
-  text-decoration: none;
+.footer-dot {
+  margin: 0 4px;
+  color: #AAB7A3;
 }
 
-.footer-contact a:hover {
-  text-decoration: underline;
+/* 區塊小標 */
+.footer-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #AAB7A3;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+
+/* 聯絡資訊與履歷連結 */
+.footer-contact a,
+.footer-resume a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #E0E5DF;
+  font-size: 13px;
+  line-height: 1.8;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.25s ease;
+}
+
+.footer-contact a:hover,
+.footer-resume a:hover {
+  color: #AAB7A3;
+}
+
+.footer-contact a>i,
+.footer-resume a>i:first-child {
+  color: #AAB7A3;
+  flex-shrink: 0;
+}
+
+.footer-external-icon {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* 分隔線 */
+.footer-divider {
+  height: 1px;
+  margin: 30px 0 20px;
+  background: rgba(242, 242, 242, 0.14);
+}
+
+/* 下方導覽 */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .footer-links {
-  margin: 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
 }
 
 .footer-links a {
-  color: #F2F2F2;
-  margin: 0 10px;
+  color: #C4CBC3;
+  font-size: 12px;
   text-decoration: none;
-  font-size: 14px;
-  transition: var(--ease);
+  transition: color 0.25s ease;
 }
 
 .footer-links a:hover {
-  color: #99c0a9;
+  color: #AAB7A3;
 }
 
+/* 版權文字 */
 .footer-copy {
-  font-size: 12px;
-  opacity: 0.6;
-  margin-top: 10px;
+  margin: 22px 0 0;
+  color: #A5ADA5;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  text-align: center;
 }
 
+/* ==================================================
+   BACK TO TOP
+================================================== */
 
-/* 回到頂端：固定圓形按鈕 */
 .footer-back-top {
   position: fixed;
   right: 28px;
   bottom: 28px;
   z-index: 999;
-}
 
-.footer-back-top a {
-  width: 48px;
-  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+
+  width: 46px;
+  height: 46px;
 
   color: #fff;
-  background-color: #6E7F6A;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: #6E7F6A;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
 
-  font-size: 1rem;
+  font-size: 15px;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(50, 60, 45, 0.18);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
 
   transition:
-    background-color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.footer-back-top a:hover {
-  background-color: #566851;
+.footer-back-top:hover {
+  color: #fff;
+  background: #566851;
   transform: translateY(-4px);
-  box-shadow: 0 7px 18px rgba(50, 60, 45, 0.25);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.24);
 }
 
 .footer-back-top i {
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
-.footer-back-top a:hover i {
+.footer-back-top:hover i {
   transform: translateY(-2px);
 }
 
-/* 手機版調整 */
-@media (max-width: 576px) {
+.footer-back-top:focus-visible {
+  outline: 2px solid #AAB7A3;
+  outline-offset: 4px;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 767.98px) {
+  .site-footer {
+    padding: 32px 20px 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-title {
+    font-size: 19px;
+  }
+
+  .footer-divider {
+    margin: 26px 0 18px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .footer-links {
+    gap: 12px 18px;
+    flex: 1;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  .footer-copy {
+    margin-top: 24px;
+    padding-right: 36px;
+    line-height: 1.8;
+  }
+
   .footer-back-top {
     right: 16px;
     bottom: 20px;
-  }
-
-  .footer-back-top a {
-    width: 44px;
-    height: 44px;
-    font-size: 0.9rem;
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
   }
 }
 
 /* 平滑捲動 */
 html {
   scroll-behavior: smooth;
+}
+
+/* 尊重使用者的減少動態效果設定 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .footer-back-top,
+  .footer-back-top i,
+  .footer-links a,
+  .footer-contact a,
+  .footer-resume a {
+    transition: none;
+  }
 }
 
 /* ================= 活動跑馬燈 ================= */
