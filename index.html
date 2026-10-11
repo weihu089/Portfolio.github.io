@@ -331,26 +331,29 @@
         專案作品
         <span class="en-title">Projects</span>
       </h2>
-
+  
       <div class="row g-4">
-
+  
         <!-- 藍牙資料接收系統 -->
         <div class="col-12 col-md-6">
           <div class="card project-card h-100">
-            <img src="images/project.png" class="card-img-top img-fluid" alt="藍牙資料接收系統" loading="lazy"
-              onclick="openLightbox(this)">
-
+  
+            <!-- 專案圖片展示區 -->
+            <div class="project-image-wrap">
+              <img src="images/project.png" alt="藍牙資料接收系統" loading="lazy" onclick="openLightbox(this)">
+            </div>
+  
             <div class="card-body">
               <h5>藍牙資料接收系統</h5>
-
+  
               <p class="project-description">
                 透過 Android App 接收感測裝置傳送的資料，
                 完成資料解析、彙整與伺服器上傳，建立從裝置通訊到資料傳輸的完整流程。
               </p>
-
+  
               <div class="project-features">
                 <h6>核心功能</h6>
-
+  
                 <div class="project-feature">
                   <i class="fa-brands fa-bluetooth-b"></i>
                   <div>
@@ -358,7 +361,7 @@
                     <p>掃描裝置並接收感測資料。</p>
                   </div>
                 </div>
-
+  
                 <div class="project-feature">
                   <i class="fa-solid fa-database"></i>
                   <div>
@@ -366,7 +369,7 @@
                     <p>解析封包內容，整理感測資料及相關資訊。</p>
                   </div>
                 </div>
-
+  
                 <div class="project-feature">
                   <i class="fa-solid fa-cloud-arrow-up"></i>
                   <div>
@@ -378,40 +381,43 @@
             </div>
           </div>
         </div>
-
+  
         <!-- No Smoke Zone -->
         <div class="col-12 col-md-6">
           <div class="card project-card h-100">
-            <img src="images/project1.png" class="card-img-top img-fluid" alt="No Smoke Zone 抽菸偵測系統" loading="lazy"
-              onclick="openLightbox(this)">
-
+  
+            <!-- 專案圖片展示區 -->
+            <div class="project-image-wrap">
+              <img src="images/project1.png" alt="No Smoke Zone 抽菸偵測系統" loading="lazy" onclick="openLightbox(this)">
+            </div>
+  
             <div class="card-body">
               <h5>No Smoke Zone</h5>
-
+  
               <p class="project-description">
                 結合電腦視覺與影像辨識技術，開發抽菸行為偵測系統，
                 將攝影機畫面呈現於網頁端，供管理人員查看監測畫面及辨識結果。
               </p>
-
+  
               <div class="project-features">
                 <h6>核心功能</h6>
-
+  
                 <div class="project-feature">
                   <i class="fa-solid fa-video"></i>
                   <div>
                     <strong>即時畫面監看</strong>
-                    <p>將攝影機畫面串流至網頁端，能從網頁端即時觀看。</p>
+                    <p>將攝影機畫面串流至網頁端，供管理人員即時查看。</p>
                   </div>
                 </div>
-
+  
                 <div class="project-feature">
                   <i class="fa-solid fa-eye"></i>
                   <div>
                     <strong>抽菸行為偵測</strong>
-                    <p>結合3個影像辨識模型來判斷抽菸行為。</p>
+                    <p>整合三種影像辨識模型，判斷抽菸行為。</p>
                   </div>
                 </div>
-
+  
                 <div class="project-feature">
                   <i class="fa-solid fa-bell"></i>
                   <div>
@@ -423,125 +429,132 @@
             </div>
           </div>
         </div>
+  
       </div>
     </div>
   </section>
 
+<!-- ================= SIDE PROJECTS ================= -->
+<section id="side-projects" class="section container" data-aos="fade-up">
+  <div class="section-card">
+    <h2>
+      延伸作品
+      <span class="en-title">Side Projects</span>
+    </h2>
 
-  <!-- ================= SIDE PROJECTS ================= -->
-  <section id="side-projects" class="section container" data-aos="fade-up">
-    <div class="section-card">
-      <h2>
-        延伸作品
-        <span class="en-title">Side Projects</span>
-      </h2>
+    <div class="row g-4">
 
-      <div class="row g-4">
+      <!-- LINE Bot 圖書管理系統 -->
+      <div class="col-12 col-md-6">
+        <div class="card project-card h-100">
 
-        <!-- LINE Bot 圖書管理系統 -->
-        <div class="col-12 col-md-6">
-          <div class="card project-card h-100">
-            <img src="images/linebot.jpg" class="card-img-top img-fluid" alt="LINE Bot 圖書管理系統" loading="lazy"
-              onclick="openLightbox(this)">
+          <!-- 專案圖片展示區 -->
+          <div class="project-image-wrap">
+            <img src="images/linebot.jpg" alt="LINE Bot 圖書管理系統" loading="lazy" onclick="openLightbox(this)">
+          </div>
 
-            <div class="card-body">
-              <h5>LINE Bot 圖書管理系統</h5>
+          <div class="card-body">
+            <h5>LINE Bot 圖書管理系統</h5>
 
-              <p class="project-description">
-                結合 LINE Bot、Flask 與 MySQL，開發可透過 LINE
-                進行互動的圖書管理系統。後端串接資料庫管理書籍、書商及訂單資料，
-                並整合 Webhook 與訊息處理流程，實現使用者互動與資料管理功能。
-              </p>
+            <p class="project-description">
+              結合 LINE Bot、Flask 與 MySQL，開發可透過 LINE
+              進行互動的圖書管理系統。後端串接資料庫管理書籍、書商及訂單資料，
+              並整合 Webhook 與訊息處理流程，實現使用者互動與資料管理功能。
+            </p>
 
-              <div class="project-features">
-                <h6>核心功能</h6>
+            <div class="project-features">
+              <h6>核心功能</h6>
 
-                <div class="project-feature">
-                  <i class="fa-solid fa-comments"></i>
-                  <div>
-                    <strong>LINE Bot 互動</strong>
-                    <p>接收並處理使用者訊息，提供圖書查詢與互動功能。</p>
-                  </div>
-                </div>
-
-                <div class="project-feature">
-                  <i class="fa-solid fa-database"></i>
-                  <div>
-                    <strong>資料庫管理</strong>
-                    <p>管理書籍、書商及訂單等資料，實作新增、查詢、修改與刪除。</p>
-                  </div>
-                </div>
-
-                <div class="project-feature">
-                  <i class="fa-solid fa-plug"></i>
-                  <div>
-                    <strong>後端與 API 整合</strong>
-                    <p>透過 Flask 處理 Webhook，串接 LINE Messaging API 與 MySQL。</p>
-                  </div>
+              <div class="project-feature">
+                <i class="fa-solid fa-comments"></i>
+                <div>
+                  <strong>LINE Bot 互動</strong>
+                  <p>接收並處理使用者訊息，提供圖書查詢與互動功能。</p>
                 </div>
               </div>
 
+              <div class="project-feature">
+                <i class="fa-solid fa-database"></i>
+                <div>
+                  <strong>資料庫管理</strong>
+                  <p>管理書籍、書商及訂單等資料，實作新增、查詢、修改與刪除。</p>
+                </div>
+              </div>
+
+              <div class="project-feature">
+                <i class="fa-solid fa-plug"></i>
+                <div>
+                  <strong>後端與 API 整合</strong>
+                  <p>透過 Flask 處理 Webhook，串接 LINE Messaging API 與 MySQL。</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- p5.js 互動式小遊戲 -->
-        <div class="col-12 col-md-6">
-          <div class="card project-card h-100">
-            <img src="images/p5.png" class="card-img-top img-fluid" alt="p5.js 互動式配對遊戲" loading="lazy"
-              onclick="openLightbox(this)">
-
-            <div class="card-body">
-              <h5>互動式配對遊戲</h5>
-
-              <p class="project-description">
-                使用 p5.js 製作可於瀏覽器操作的配對遊戲，設計多種關卡與遊戲機制，結合配對判定、倒數計時及狀態管理，並加入不同主題與特殊道具，增加遊戲的互動性與挑戰性。
-              </p>
-
-              <div class="project-features">
-                <h6>核心功能</h6>
-
-                <div class="project-feature">
-                  <i class="fa-solid fa-layer-group"></i>
-                  <div>
-                    <strong>多關卡配對</strong>
-                    <p>提供不同配對數量的關卡，並依據玩家操作判定配對結果。</p>
-                  </div>
-                </div>
-
-                <div class="project-feature">
-                  <i class="fa-solid fa-stopwatch"></i>
-                  <div>
-                    <strong>計時與狀態管理</strong>
-                    <p>實作預覽時間、倒數計時及遊戲進行狀態控制。</p>
-                  </div>
-                </div>
-
-                <div class="project-feature">
-                  <i class="fa-solid fa-puzzle-piece"></i>
-                  <div>
-                    <strong>特殊道具與主題切換</strong>
-                    <p>加入炸彈、護盾及不同遊戲主題，豐富互動體驗。</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-auto pt-4">
-                <a href="https://editor.p5js.org/weihu/sketches/UVzYKneQk" target="_blank" rel="noopener noreferrer"
-                  class="demo-btn">
-                  <span>▶</span>
-                  <span>立即體驗</span>
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
 
+      <!-- p5.js 互動式小遊戲 -->
+      <div class="col-12 col-md-6">
+        <div class="card project-card h-100">
+
+          <!-- 專案圖片展示區 -->
+          <div class="project-image-wrap">
+            <img src="images/p5.png" alt="p5.js 互動式配對遊戲" loading="lazy" onclick="openLightbox(this)">
+          </div>
+
+          <div class="card-body">
+            <h5>互動式配對遊戲</h5>
+
+            <p class="project-description">
+              使用 p5.js 製作可於瀏覽器操作的配對遊戲，設計多種關卡與遊戲機制，
+              結合配對判定、倒數計時及狀態管理，並加入不同主題與特殊道具，
+              增加遊戲的互動性與挑戰性。
+            </p>
+
+            <div class="project-features">
+              <h6>核心功能</h6>
+
+              <div class="project-feature">
+                <i class="fa-solid fa-layer-group"></i>
+                <div>
+                  <strong>多關卡配對</strong>
+                  <p>提供不同配對數量的關卡，並依據玩家操作判定配對結果。</p>
+                </div>
+              </div>
+
+              <div class="project-feature">
+                <i class="fa-solid fa-stopwatch"></i>
+                <div>
+                  <strong>計時與狀態管理</strong>
+                  <p>實作預覽時間、倒數計時及遊戲進行狀態控制。</p>
+                </div>
+              </div>
+
+              <div class="project-feature">
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <div>
+                  <strong>特殊道具與主題切換</strong>
+                  <p>加入炸彈、護盾及不同遊戲主題，豐富互動體驗。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 遊戲體驗按鈕 -->
+            <div class="mt-auto pt-4">
+              <a href="https://editor.p5js.org/weihu/sketches/UVzYKneQk" target="_blank" rel="noopener noreferrer"
+                class="demo-btn">
+                <span>▶</span>
+                <span>立即體驗</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- ================= SKILLS ================= -->
   <section id="skills" class="section container" data-aos="fade-up">
