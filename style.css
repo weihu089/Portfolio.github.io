@@ -790,26 +790,33 @@ p.en {
   outline-offset: 3px;
 }
 
-
 /* ==================================================
    RESPONSIVE / MOBILE
 ================================================== */
 
 @media (max-width: 767.98px) {
 
-  /* 圖片展示區 */
+  /* 專案圖片展示區：比照 CERTIFICATIONS */
   .project-card .project-image-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 220px;
-    padding: 0.75rem;
+    padding: 1rem;
+    background: #F5F3EE;
+    overflow: hidden;
   }
 
+  /* 圖片完整顯示，避免裁切 */
   .project-card .project-image-wrap img {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
-  /* 圓形按鈕 */
+  /* 系統架構圖圓形按鈕 */
   .project-architecture-btn {
     right: 14px;
     bottom: 14px;
@@ -823,7 +830,7 @@ p.en {
     padding: 1.25rem;
   }
 
-  /* 舊版文件按鈕：若其他專案仍使用，維持滿版 */
+  /* 舊版文件按鈕 */
   .project-doc-btn {
     width: 100%;
   }
