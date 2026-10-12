@@ -550,6 +550,7 @@ p.en {
 /* ==================================================
    PROJECTS / CARDS
 ================================================== */
+
 .project-card {
   height: 100%;
   border: 1px solid #E6E2DA;
@@ -564,6 +565,11 @@ p.en {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
+
+
+/* ==================================================
+   PROJECT IMAGE
+================================================== */
 
 /* 專案圖片展示區：完整呈現、不裁切 */
 .project-card .project-image-wrap {
@@ -587,7 +593,16 @@ p.en {
   transition: transform 0.3s ease;
 }
 
-/* 卡片內容 */
+/* 圖片 hover 效果 */
+.project-card .project-image-wrap img:hover {
+  transform: scale(1.03);
+}
+
+
+/* ==================================================
+   PROJECT CONTENT
+================================================== */
+
 .project-card .card-body {
   display: flex;
   flex-direction: column;
@@ -612,6 +627,11 @@ p.en {
   line-height: 1.85;
   margin-bottom: 1.5rem;
 }
+
+
+/* ==================================================
+   PROJECT FEATURES
+================================================== */
 
 /* 核心功能區塊 */
 .project-features {
@@ -667,15 +687,72 @@ p.en {
   margin: 0;
 }
 
-/* 手機版調整 */
+
+/* ==================================================
+   PROJECT DOCUMENT BUTTON
+================================================== */
+
+.project-actions {
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(110, 127, 106, 0.22);
+}
+
+/* 文件按鈕 */
+.project-doc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.7rem 1rem;
+
+  color: #6E7F6A;
+  background: #F5F3EE;
+  border: 1px solid #D8DED4;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: var(--ease);
+}
+
+/* 按鈕 hover 效果 */
+.project-doc-btn:hover {
+  color: #fff;
+  background: #6E7F6A;
+  border-color: #6E7F6A;
+  transform: translateY(-2px);
+}
+
+/* 外部連結圖示 */
+.project-doc-btn .external-icon {
+  font-size: 0.75rem;
+  margin-left: 0.15rem;
+}
+
+
+/* ==================================================
+   RESPONSIVE / MOBILE
+================================================== */
+
 @media (max-width: 767.98px) {
+
+  /* 圖片展示區 */
   .project-card .project-image-wrap {
     height: 220px;
     padding: 0.75rem;
   }
 
+  /* 卡片內容 */
   .project-card .card-body {
     padding: 1.25rem;
+  }
+
+  /* 文件按鈕填滿寬度 */
+  .project-doc-btn {
+    width: 100%;
   }
 }
 
