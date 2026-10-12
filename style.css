@@ -687,15 +687,15 @@ p.en {
   margin: 0;
 }
 
-
 /* ==================================================
    PROJECT DOCUMENT BUTTON
 ================================================== */
 
+/* 舊版文件按鈕區：保留相容性，不再增加額外空間 */
 .project-actions {
-  margin-top: 1.5rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid rgba(110, 127, 106, 0.22);
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 /* 文件按鈕 */
@@ -718,7 +718,6 @@ p.en {
   transition: var(--ease);
 }
 
-/* 按鈕 hover 效果 */
 .project-doc-btn:hover {
   color: #fff;
   background: #6E7F6A;
@@ -726,10 +725,69 @@ p.en {
   transform: translateY(-2px);
 }
 
-/* 外部連結圖示 */
 .project-doc-btn .external-icon {
   font-size: 0.75rem;
   margin-left: 0.15rem;
+}
+
+
+/* ==================================================
+   PROJECT IMAGE & ARCHITECTURE BUTTON
+================================================== */
+
+.project-card .project-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 圖片 */
+.project-card .project-image-wrap img {
+  display: block;
+  width: 100%;
+}
+
+/* 圓形系統架構圖按鈕 */
+.project-architecture-btn {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  background: #6E7F6A;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* 滑鼠移入效果 */
+.project-architecture-btn:hover {
+  color: #fff;
+  background: #53664F;
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
+}
+
+/* 鍵盤操作焦點 */
+.project-architecture-btn:focus-visible {
+  outline: 3px solid #AAB7A3;
+  outline-offset: 3px;
 }
 
 
@@ -745,12 +803,27 @@ p.en {
     padding: 0.75rem;
   }
 
+  .project-card .project-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 圓形按鈕 */
+  .project-architecture-btn {
+    right: 14px;
+    bottom: 14px;
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
   /* 卡片內容 */
   .project-card .card-body {
     padding: 1.25rem;
   }
 
-  /* 文件按鈕填滿寬度 */
+  /* 舊版文件按鈕：若其他專案仍使用，維持滿版 */
   .project-doc-btn {
     width: 100%;
   }
