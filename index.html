@@ -317,11 +317,11 @@
         <span class="en-title">Projects</span>
       </h2>
 
-      <div class="row g-4">
+      <div class="row g-4 align-items-start">
 
         <!-- 藍牙資料接收系統 -->
-        <div class="col-12 col-md-6">
-          <div class="card project-card h-100">
+        <div class="col-12 col-md-6 project-column">
+          <div class="card project-card">
 
             <!-- 專案圖片展示區 -->
             <div class="project-image-wrap">
@@ -367,14 +367,56 @@
                     <p>透過 HTTP 傳送資料，並處理上傳失敗與重試流程。</p>
                   </div>
                 </div>
+
+                <!-- STAR 實作紀錄 -->
+                <details class="project-star">
+                  <summary>
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <span>專案實作與問題解決</span>
+                    <i class="fa-solid fa-chevron-down star-chevron"></i>
+                  </summary>
+                  <div class="star-content">
+                    <div class="star-item">
+                      <span class="star-label">S</span>
+                      <div>
+                        <strong>情境 Situation</strong>
+                        <p>系統需持續接收藍牙感測器傳送的資料，完成資料解析與彙整，並傳輸至伺服器，以確保資料能完整傳遞。</p>
+                      </div>
+                    </div>
+                    <div class="star-item">
+                      <span class="star-label">T</span>
+                      <div>
+                        <strong>任務 Task</strong>
+                        <p>負責系統的主要開發工作，涵蓋藍牙裝置掃描、感測資料接收與解析、資料彙整、檔案紀錄及伺服器上傳等流程，並持續測試系統功能、追蹤異常問題，確保各項功能能正常運作。</p>
+                      </div>
+                    </div>
+
+                    <div class="star-item">
+                      <span class="star-label">A</span>
+                      <div>
+                        <strong>行動 Action</strong>
+                        <p>使用 Android Studio 開發，依據感測資料封包格式撰寫解析邏輯，整合 BLE 掃描、資料處理與上傳流程。開發期間持續進行功能測試，透過 Log
+                          記錄與分析追蹤問題、重現異常情境，針對藍牙掃描、網路中斷及上傳失敗等狀況調整程式流程，並設計失敗資料暫存、重試與恢復上傳機制，透過反覆測試驗證修改結果。</p>
+                      </div>
+                    </div>
+
+                    <div class="star-item">
+                      <span class="star-label">R</span>
+                      <div>
+                        <strong>結果 Result</strong>
+                        <p>完成系統功能整合與多輪測試驗證，成功改善開發過程中遇到的各類異常問題，使系統能夠長時間穩定運作，確保藍牙感測資料的接收、處理與上傳流程正常執行。</p>
+                      </div>
+                    </div>
+                  </div>
+                </details>
               </div>
             </div>
           </div>
         </div>
 
         <!-- No Smoke Zone -->
-        <div class="col-12 col-md-6">
-          <div class="card project-card h-100">
+        <div class="col-12 col-md-6 project-column">
+          <div class="card project-card">
 
             <!-- 專案圖片展示區 -->
             <div class="project-image-wrap">
@@ -414,6 +456,59 @@
                     <p>偵測到抽菸行為時，保存相關影像及時間資訊，並通知管理人員。</p>
                   </div>
                 </div>
+
+                <!-- STAR 實作紀錄 -->
+                <details class="project-star">
+                  <summary>
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <span>專案實作與問題解決</span>
+                    <i class="fa-solid fa-chevron-down star-chevron"></i>
+                  </summary>
+
+                  <div class="star-content">
+                    <div class="star-item">
+                      <span class="star-label">S</span>
+                      <div>
+                        <strong>情境 Situation</strong>
+                        <p>
+                          專題旨在開發以影像辨識為基礎的抽菸偵測系統，整合攝影機即時畫面、行為辨識與網頁監看功能。
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="star-item">
+                      <span class="star-label">T</span>
+                      <div>
+                        <strong>任務 Task</strong>
+                        <p>
+                          負責 MediaPipe 影像處理模組的開發，並參與影像辨識模型整合、系統設計及功能測試，協助各項功能順利串接。
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="star-item">
+                      <span class="star-label">A</span>
+                      <div>
+                        <strong>行動 Action</strong>
+                        <p>
+                          運用 MediaPipe 進行影像處理，配合系統需求調整影像處理流程，並協助整合 YOLOv8 辨識模型，測試各模組的執行結果與整合情形，確認影像處理、辨識結果及網頁監看功能能正常配合運作。
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="star-item">
+                      <span class="star-label">R</span>
+                      <div>
+                        <strong>結果 Result</strong>
+                        <p>
+                          完成所負責的 MediaPipe 影像處理模組，並協助整合影像辨識與網頁監看功能，使系統能呈現攝影機畫面及辨識結果，完成抽菸偵測系統的主要功能整合。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+
+
               </div>
             </div>
           </div>
