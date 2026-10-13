@@ -354,7 +354,6 @@ p.en {
   background: linear-gradient(to right, transparent, #d8d2c8, transparent);
 }
 
-/* 關於我：英文使用 Noto Serif TC */
 #about .section-card p {
   font-family: 'Noto Serif TC', serif;
 }
@@ -455,7 +454,6 @@ p.en {
   margin: 1rem 0 1.5rem;
 }
 
-/* 技能卡片 */
 .skill-box {
   height: 100%;
   padding: 1.5rem;
@@ -502,7 +500,6 @@ p.en {
   line-height: 1.6;
 }
 
-/* 技能說明 */
 .skill-box>p {
   color: var(--muted);
   font-size: 0.9rem;
@@ -566,7 +563,6 @@ p.en {
   box-shadow: var(--shadow-lg);
 }
 
-
 /* ==================================================
    PROJECT IMAGE
 ================================================== */
@@ -598,11 +594,9 @@ p.en {
   transform: scale(1.03);
 }
 
-
 /* ==================================================
    PROJECT CONTENT
 ================================================== */
-
 .project-card .card-body {
   display: flex;
   flex-direction: column;
@@ -627,7 +621,6 @@ p.en {
   line-height: 1.85;
   margin-bottom: 1.5rem;
 }
-
 
 /* ==================================================
    PROJECT FEATURES
@@ -690,8 +683,6 @@ p.en {
 /* ==================================================
    PROJECT DOCUMENT BUTTON
 ================================================== */
-
-/* 舊版文件按鈕區：保留相容性，不再增加額外空間 */
 .project-actions {
   margin-top: 0;
   padding-top: 0;
@@ -790,7 +781,6 @@ p.en {
   outline-offset: 3px;
 }
 
-
 /* ==================================================
    PROJECTS — STAR 實作紀錄
 ================================================== */
@@ -802,7 +792,6 @@ p.en {
   border-top: 1px solid rgba(110, 127, 106, 0.25);
 }
 
-/* 展開標題 */
 .project-star summary {
   display: flex;
   align-items: center;
@@ -947,7 +936,6 @@ p.en {
   }
 }
 
-
 /* ==================================================
    ACCESSIBILITY — REDUCED MOTION
 ================================================== */
@@ -963,7 +951,6 @@ p.en {
 /* ==================================================
    DEMO BUTTON
 ================================================== */
-
 .demo-btn {
   display: inline-flex;
   align-items: center;
@@ -1015,11 +1002,9 @@ p.en {
   }
 }
 
-
 /* ==================================================
    CERTIFICATIONS
 ================================================== */
-
 .certifications-intro {
   color: var(--muted);
   font-size: 0.95rem;
@@ -1076,26 +1061,40 @@ p.en {
   font-weight: 600;
 }
 
-/* 證照資訊 */
+/* 證照資訊區 */
 .cert-card .card-body {
-  padding: 1.25rem 1.4rem;
+  padding: 1.4rem;
 }
 
+/* 證照名稱：主要標題 */
 .cert-card h5 {
   margin: 0 0 0.4rem;
   color: #343A35;
   font-family: 'Noto Serif TC', serif;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 600;
+  line-height: 1.5;
 }
 
-.cert-card .card-body p {
+/* 發證單位：次要資訊 */
+.cert-card .cert-issuer {
+  margin: 0 0 1rem;
+  color: #8A8F89;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* 證照說明：內文 */
+.cert-card .cert-description {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.7;
+  padding-top: 0.85rem;
+  color: #555D57;
+  border-top: 1px solid #EAE8E1;
+  font-size: 0.95rem;
+  line-height: 1.9;
 }
 
+/* 手機版 RWD */
 @media (max-width: 767.98px) {
   .cert-image-wrap {
     height: 220px;
@@ -1103,6 +1102,15 @@ p.en {
 
   .cert-card .card-body {
     padding: 1.1rem 1.2rem;
+  }
+
+  .cert-card h5 {
+    font-size: 1.1rem;
+  }
+
+  .cert-card .cert-description {
+    font-size: 0.92rem;
+    line-height: 1.8;
   }
 }
 
@@ -1308,11 +1316,9 @@ p.en {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-
 /* ==================================================
    FOOTER
 ================================================== */
-
 .site-footer {
   background: #2E3430;
   color: #F2F2F2;
@@ -1546,7 +1552,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 尊重使用者的減少動態效果設定 */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
